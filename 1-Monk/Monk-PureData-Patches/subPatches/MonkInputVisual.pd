@@ -1,4 +1,4 @@
-#N canvas 874 128 926 538 10;
+#N canvas 874 128 926 596 10;
 #X obj 50 185 select 192;
 #X obj 107 296 spigot;
 #X msg 140 273 0;
@@ -48,17 +48,17 @@ from 0 to 1, f 34;
 #X obj 441 492 outlet;
 #X obj 505 492 outlet;
 #X obj 613 215 vsl 32 128 0 1 0 0 empty p1Out p1 0 -9 0 10 -159808
--257985 -159808 7411 1;
+-257985 -159808 7287 1;
 #X obj 653 215 vsl 32 128 0 1 0 0 empty p2Out p2 0 -9 0 10 -159808
 -257985 -159808 12700 1;
 #X obj 693 215 vsl 32 128 0 1 0 0 empty p3Out p3 0 -9 0 10 -159808
--257985 -159808 3166 1;
+-257985 -159808 11893 1;
 #X obj 733 215 vsl 32 128 0 1 0 0 empty p4Out p4 0 -9 0 10 -159808
--257985 -159808 12700 1;
+-257985 -159808 6021 1;
 #X obj 773 215 vsl 32 128 0 1 0 0 empty p5Out p5 0 -9 0 10 -159808
 -257985 -159808 12700 1;
 #X obj 813 215 vsl 32 128 0 1 0 0 empty p6Out p6 0 -9 0 10 -159808
--257985 -159808 4333 1;
+-257985 -159808 0 1;
 #X floatatom 613 357 5 0 0 0 - - -, f 5;
 #X floatatom 653 357 5 0 0 0 - - -, f 5;
 #X floatatom 693 357 5 0 0 0 - - -, f 5;
@@ -93,6 +93,12 @@ from 0 to 1, f 34;
 #X obj 132 111 r close;
 #X obj 524 152 s devices;
 #X obj 33 62 r devices;
+#X text 598 386 HOW TO CONNECT TO THE MONK: 1 Click the "devices" button
+2 Check console: you should see the available connected ports 3 Set
+the "select port" number and hit the "go!" button. Now you should be
+getting some readings when you rotate the potentiometers. If not \,
+try another one of the ports. - Hit the "close" button to terminate
+the connection., f 37;
 #X connect 0 0 6 0;
 #X connect 0 1 1 0;
 #X connect 1 0 11 0;
