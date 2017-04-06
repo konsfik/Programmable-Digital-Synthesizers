@@ -1,0 +1,61 @@
+#N canvas 483 50 1102 747 10;
+#X obj 76 82 phasor~;
+#X obj 75 560 outlet~;
+#X obj 30 18 inlet~;
+#X obj 125 19 inlet;
+#X text 614 39 a simple saw oscillator \, made with sinesums (so it
+is band-limited) source: http://en.flossmanuals.net/pure-data/audio-tutorials/generating-waveforms/
+, f 32;
+#N canvas 0 50 1004 515 (subpatch) 0;
+#X array \$0-array 16387 float 2;
+#X coords 0 1 16387 -1 200 140 1 0 0;
+#X restore 179 254 graph;
+#X obj 76 128 tabread4~ \$0-array;
+#X obj 224 466 t b b;
+#X obj 224 438 loadbang;
+#X obj 176 421 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 224 564 normalize 1;
+#X obj 76 105 *~ 16387;
+#X msg 256 493 sinesum 16387 1 0.5 0.333333 0.25 0.2 0.166667 0.142857
+0.125 0.111111 0.1 0.090909 0.083333 0.076923;
+#X obj 410 663 s \$0-array;
+#X obj 226 23 inlet;
+#X obj 245 72 sel 0 1 2;
+#X obj 505 312 t b b;
+#X obj 457 267 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 505 409 normalize 1;
+#X msg 537 340 sinesum 16387 1 0 0.333333 0 0.2 0 0.142857 0 0.111111
+0 0.090909 0 0.076923;
+#X obj 598 187 t b b;
+#X obj 550 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 630 215 sinesum 16387 1 0 -0.111111 0 0.04 0 -0.0204082 0 0.0123457
+0 -0.00826446 0;
+#X msg 598 285 normalize 1;
+#X connect 0 0 11 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 1;
+#X connect 6 0 1 0;
+#X connect 7 0 10 0;
+#X connect 7 1 12 0;
+#X connect 8 0 7 0;
+#X connect 9 0 7 0;
+#X connect 10 0 13 0;
+#X connect 11 0 6 0;
+#X connect 12 0 13 0;
+#X connect 14 0 15 0;
+#X connect 15 0 9 0;
+#X connect 15 1 17 0;
+#X connect 15 2 21 0;
+#X connect 16 0 18 0;
+#X connect 16 1 19 0;
+#X connect 17 0 16 0;
+#X connect 18 0 13 0;
+#X connect 19 0 13 0;
+#X connect 20 0 23 0;
+#X connect 20 1 22 0;
+#X connect 21 0 20 0;
+#X connect 22 0 13 0;
+#X connect 23 0 13 0;

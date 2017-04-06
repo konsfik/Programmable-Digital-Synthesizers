@@ -1,0 +1,221 @@
+#N canvas 553 50 1517 914 10;
+#X obj 324 23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 324 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 354 63 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 384 23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 384 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 414 23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 414 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 474 23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 474 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 504 23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 504 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 564 23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 564 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 594 23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 594 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 654 23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 654 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 594 63 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 23 323 s p1;
+#X obj 73 324 s p2;
+#X obj 124 323 s p3;
+#X obj 174 323 s p4;
+#X obj 225 323 s p5;
+#X obj 276 324 s p6;
+#X obj 23 23 subPatches/MonkInputVisual;
+#X obj 976 844 dac~ 1 2;
+#X obj 998 811 *~;
+#X obj 1016 699 r p6;
+#X msg 1016 755 \$1 30;
+#X obj 1016 783 vline~;
+#X obj 974 718 vsl 32 64 0 1 0 0 empty empty Master_Volume -45 -9 0
+10 -159808 -257985 -159808 0 1;
+#X text 732 41 Monk - example patch 1 By Kostas Sfikas April 2017,
+f 23;
+#X obj 446 284 r p1;
+#X obj 589 284 r p2;
+#X obj 584 629 +~;
+#X obj 602 604 *~;
+#X obj 722 284 r p3;
+#X obj 722 352 * 1000;
+#X obj 674 707 *~;
+#X obj 920 557 *~ 0.5;
+#X obj 920 580 +~ 0.5;
+#X obj 856 284 r p4;
+#X obj 446 340 + 120;
+#X obj 446 312 * 1880;
+#X obj 403 303 vsl 32 64 0 1 0 0 empty empty Main-Frequency -50 -9
+0 10 -159808 -257985 -159808 1269 1;
+#X floatatom 403 381 5 0 0 0 - - -, f 5;
+#X msg 446 368 \$1 30;
+#X obj 446 396 vline~;
+#X obj 546 303 vsl 32 64 0 1 0 0 empty empty FM-Frequency -40 -9 0
+10 -159808 -257985 -159808 6300 1;
+#X floatatom 546 381 5 0 0 0 - - -, f 5;
+#X obj 679 303 vsl 32 64 0 1 0 0 empty empty FM-Amplitude -40 -9 0
+10 -159808 -257985 -159808 0 1;
+#X floatatom 679 381 5 0 0 0 - - -, f 5;
+#X obj 983 301 r p5;
+#X obj 812 303 vsl 32 64 0 1 0 0 empty empty AM-Frequency -40 -9 0
+10 -159808 -257985 -159808 0 1;
+#X floatatom 812 376 5 0 0 0 - - -, f 5;
+#X obj 737 381 + 1;
+#X obj 997 378 -;
+#X msg 983 349 1;
+#X obj 983 325 t b f;
+#X floatatom 945 406 5 0 0 0 - - -, f 5;
+#X obj 919 603 *~;
+#X obj 919 626 +~;
+#X obj 856 360 + 0.5;
+#X obj 589 332 * 99.5;
+#X obj 589 360 + 0.5;
+#X obj 945 303 vsl 32 64 0 1 0 0 empty empty AM-Intensity -40 -9 0
+10 -159808 -257985 -159808 0 1;
+#X floatatom 945 381 5 0 0 0 - - -, f 5;
+#X obj 1016 727 pow 2;
+#X obj 722 308 pow 2;
+#X obj 856 336 * 29.5;
+#X obj 856 307 pow 2;
+#X obj 589 306 pow 2;
+#X obj 601 425 vline~;
+#X msg 601 392 \$1 30;
+#X text 324 174 Controls: Pot 1: Main Frequency Pot 2: FM-Frequency
+(The frequency of the frequency modulation) Pot 3: FM-Amplitude (The
+amplitude of the frequency modulation) Pot 4:, f 69;
+#X text 19 354 HOW TO CONNECT TO THE MONK: 1 Click the "devices" button
+2 Check console: you should see the available connected ports 3 Set
+the "select port" number and hit the "go!" button. Now you should be
+getting some readings when you rotate the potentiometers. If not \,
+try another one of the ports. - Hit the "close" button to terminate
+the connection., f 37;
+#X obj 61 573 tgl 15 0 empty empty dsp_on/off 17 7 0 10 -262144 -1
+-1 1 1;
+#X msg 61 596 \; pd dsp \$1;
+#X text 834 528 amplitude modulation oscillator, f 11;
+#X obj 583 651 subPatches/multiOsc~;
+#X msg 680 598 0;
+#X msg 720 598 1;
+#X msg 760 598 2;
+#X obj 601 520 subPatches/multiOsc~;
+#X obj 920 529 subPatches/multiOsc~;
+#X obj 720 570 loadbang;
+#X floatatom 720 626 5 0 0 0 - - -, f 5;
+#X msg 698 467 0;
+#X msg 738 467 1;
+#X msg 778 467 2;
+#X obj 698 439 loadbang;
+#X floatatom 738 495 5 0 0 0 - - -, f 5;
+#X text 512 497 frequency modulation oscillator, f 11;
+#X text 494 645 basic tone oscillator, f 11;
+#X msg 1017 476 0;
+#X msg 1057 476 1;
+#X msg 1097 476 2;
+#X obj 1017 448 loadbang;
+#X floatatom 1057 504 5 0 0 0 - - -, f 5;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 6 0;
+#X connect 5 0 7 0;
+#X connect 6 0 8 0;
+#X connect 7 0 8 0;
+#X connect 9 0 10 0;
+#X connect 9 0 12 0;
+#X connect 11 0 12 0;
+#X connect 13 0 14 0;
+#X connect 17 0 15 0;
+#X connect 17 0 16 0;
+#X connect 24 0 18 0;
+#X connect 24 1 19 0;
+#X connect 24 2 20 0;
+#X connect 24 3 21 0;
+#X connect 24 4 22 0;
+#X connect 24 5 23 0;
+#X connect 26 0 25 0;
+#X connect 26 0 25 1;
+#X connect 27 0 67 0;
+#X connect 27 0 30 0;
+#X connect 28 0 29 0;
+#X connect 29 0 26 1;
+#X connect 32 0 43 0;
+#X connect 32 0 44 0;
+#X connect 33 0 48 0;
+#X connect 33 0 71 0;
+#X connect 34 0 79 0;
+#X connect 35 0 34 1;
+#X connect 36 0 50 0;
+#X connect 36 0 68 0;
+#X connect 37 0 35 1;
+#X connect 37 0 51 0;
+#X connect 38 0 26 0;
+#X connect 39 0 40 0;
+#X connect 40 0 60 0;
+#X connect 41 0 53 0;
+#X connect 41 0 70 0;
+#X connect 42 0 45 0;
+#X connect 42 0 46 0;
+#X connect 43 0 42 0;
+#X connect 46 0 47 0;
+#X connect 47 0 34 0;
+#X connect 52 0 58 0;
+#X connect 52 0 60 1;
+#X connect 52 0 66 0;
+#X connect 52 0 65 0;
+#X connect 56 0 59 0;
+#X connect 56 0 61 1;
+#X connect 57 0 56 0;
+#X connect 58 0 57 0;
+#X connect 58 1 56 1;
+#X connect 60 0 61 0;
+#X connect 61 0 38 1;
+#X connect 62 0 54 0;
+#X connect 62 0 84 0;
+#X connect 63 0 64 0;
+#X connect 64 0 49 0;
+#X connect 64 0 73 0;
+#X connect 67 0 28 0;
+#X connect 68 0 37 0;
+#X connect 69 0 62 0;
+#X connect 70 0 69 0;
+#X connect 71 0 63 0;
+#X connect 72 0 83 0;
+#X connect 73 0 72 0;
+#X connect 76 0 77 0;
+#X connect 79 0 38 0;
+#X connect 80 0 86 0;
+#X connect 81 0 86 0;
+#X connect 82 0 86 0;
+#X connect 83 0 35 0;
+#X connect 84 0 39 0;
+#X connect 85 0 81 0;
+#X connect 86 0 79 2;
+#X connect 87 0 91 0;
+#X connect 88 0 91 0;
+#X connect 89 0 91 0;
+#X connect 90 0 87 0;
+#X connect 91 0 83 2;
+#X connect 94 0 98 0;
+#X connect 95 0 98 0;
+#X connect 96 0 98 0;
+#X connect 97 0 94 0;
+#X connect 98 0 84 2;
