@@ -1,4 +1,4 @@
-#N canvas 326 65 1156 696 10;
+#N canvas 615 101 1156 740 10;
 #X obj 358 19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 358 99 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -42,65 +42,70 @@
 #X obj 219 319 s p5;
 #X obj 270 320 s p6;
 #X obj 17 19 subPatches/MonkInputVisual;
-#X obj 597 648 dac~ 1 2;
-#X obj 619 615 *~;
-#X obj 637 501 r p6;
-#X msg 637 559 \$1 30;
-#X obj 637 587 vline~;
-#X obj 718 548 vsl 32 64 0 1 0 0 empty empty Master_Volume 0 -9 0 10
--159808 -257985 -159808 1915 1;
-#X obj 538 256 mtof;
-#X obj 538 172 r p1;
-#X obj 938 256 mtof;
-#X obj 938 171 r p4;
-#X obj 642 415 hsl 64 32 0 1 0 0 empty empty Mixer -2 -8 0 10 -159808
--257985 -159808 105 1;
-#X obj 676 387 r p3;
-#X obj 373 340 subPatches/multiOsc~;
-#X obj 538 340 subPatches/multiOsc~;
-#X obj 773 340 subPatches/multiOsc~;
-#X obj 938 340 subPatches/multiOsc~;
-#X obj 538 228 + 36;
-#X obj 495 191 vsl 32 64 0 1 0 0 empty empty Frequency-1 -35 -9 0 10
+#X obj 597 688 dac~ 1 2;
+#X obj 619 655 *~;
+#X obj 637 541 r p6;
+#X msg 637 599 \$1 30;
+#X obj 637 627 vline~;
+#X obj 718 588 vsl 32 64 0 1 0 0 empty empty Master_Volume 0 -9 0 10
 -159808 -257985 -159808 0 1;
-#X obj 480 370 r p2;
-#X msg 510 312 2;
-#X msg 675 312 0;
-#X msg 910 312 2;
-#X msg 1075 312 0;
-#X text 569 311 triangle wave;
-#X text 418 311 square wave;
-#X obj 446 398 hsl 64 32 0 1 0 0 empty empty Mixer -2 -8 0 10 -159808
--257985 -159808 3917 1;
-#X obj 846 399 hsl 64 32 0 1 0 0 empty empty Mixer -2 -8 0 10 -159808
--257985 -159808 0 1;
-#X obj 880 371 r p5;
-#X obj 637 529 pow 2;
-#X obj 538 200 * 24;
-#X obj 938 200 * 24;
-#X obj 938 228 + 48;
-#X text 969 311 triangle wave;
-#X text 818 311 square wave;
-#X obj 895 189 vsl 32 64 0 1 0 0 empty empty Frequency-2 -35 -9 0 10
--159808 -257985 -159808 3153 1;
+#X obj 538 236 mtof;
+#X obj 538 152 r p1;
+#X obj 938 236 mtof;
+#X obj 938 151 r p4;
+#X obj 642 455 hsl 64 32 0 1 0 0 empty empty Mixer -2 -8 0 10 -159808
+-257985 -159808 2974 1;
+#X obj 676 427 r p3;
+#X obj 373 380 subPatches/multiOsc~;
+#X obj 538 380 subPatches/multiOsc~;
+#X obj 773 380 subPatches/multiOsc~;
+#X obj 938 380 subPatches/multiOsc~;
+#X obj 538 208 + 36;
+#X obj 495 171 vsl 32 64 0 1 0 0 empty empty Frequency-1 -35 -9 0 10
+-159808 -257985 -159808 0 1;
+#X obj 480 410 r p2;
+#X msg 510 352 2;
+#X msg 675 352 0;
+#X msg 910 352 2;
+#X msg 1075 352 0;
+#X text 569 351 triangle wave;
+#X text 418 351 square wave;
+#X obj 446 438 hsl 64 32 0 1 0 0 empty empty Mixer -2 -8 0 10 -159808
+-257985 -159808 4452 1;
+#X obj 846 439 hsl 64 32 0 1 0 0 empty empty Mixer -2 -8 0 10 -159808
+-257985 -159808 1601 1;
+#X obj 880 411 r p5;
+#X obj 637 569 pow 2;
+#X obj 538 180 * 24;
+#X obj 938 180 * 24;
+#X obj 938 208 + 48;
+#X text 969 351 triangle wave;
+#X text 818 351 square wave;
+#X obj 895 169 vsl 32 64 0 1 0 0 empty empty Frequency-2 -35 -9 0 10
+-159808 -257985 -159808 0 1;
 #X text 14 372 1 Click on "devices";
 #X text 14 392 2 Check console for available ports;
 #X text 14 412 3 Set the select port to arduino port;
 #X text 14 432 4 Click on "go!";
 #X text 14 452 5 Now you should have a connection!;
 #X text 14 352 INSTRUCTIONS:;
-#X obj 510 284 loadbang;
-#X obj 675 284 loadbang;
-#X obj 910 284 loadbang;
-#X obj 1075 284 loadbang;
-#X text 744 12 MONK - example patch 1;
+#X obj 510 324 loadbang;
+#X obj 675 324 loadbang;
+#X obj 910 324 loadbang;
+#X obj 1075 324 loadbang;
 #X text 744 32 Author: Kostas Sfikas;
 #X text 744 52 Date: March 2017;
 #X text 14 472 6 Enable DSP to hear sound;
 #X obj 17 530 subPatches/dspOnOff;
-#X obj 618 458 subPatches/mixer~;
-#X obj 422 441 subPatches/mixer~;
-#X obj 822 442 subPatches/mixer~;
+#X obj 618 498 subPatches/mixer~;
+#X obj 422 481 subPatches/mixer~;
+#X obj 822 482 subPatches/mixer~;
+#X text 744 12 Monk-Example-1-Monk;
+#X obj 599 218;
+#X msg 538 264 \$1 30;
+#X obj 538 292 vline~;
+#X msg 938 264 \$1 30;
+#X obj 938 292 vline~;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 2 0 3 0;
@@ -126,29 +131,27 @@
 #X connect 27 0 53 0;
 #X connect 28 0 29 0;
 #X connect 29 0 26 1;
-#X connect 31 0 37 0;
-#X connect 31 0 38 0;
+#X connect 31 0 79 0;
 #X connect 32 0 42 0;
 #X connect 32 0 54 0;
-#X connect 33 0 39 0;
-#X connect 33 0 40 0;
+#X connect 33 0 81 0;
 #X connect 34 0 55 0;
 #X connect 34 0 59 0;
 #X connect 36 0 35 0;
-#X connect 36 0 75 1;
-#X connect 37 0 76 0;
-#X connect 38 0 76 2;
-#X connect 39 0 77 0;
-#X connect 40 0 77 2;
+#X connect 36 0 74 1;
+#X connect 37 0 75 0;
+#X connect 38 0 75 2;
+#X connect 39 0 76 0;
+#X connect 40 0 76 2;
 #X connect 41 0 31 0;
 #X connect 43 0 50 0;
-#X connect 43 0 76 1;
+#X connect 43 0 75 1;
 #X connect 44 0 37 2;
 #X connect 45 0 38 2;
 #X connect 46 0 39 2;
 #X connect 47 0 40 2;
 #X connect 52 0 51 0;
-#X connect 52 0 77 1;
+#X connect 52 0 76 1;
 #X connect 53 0 28 0;
 #X connect 53 0 30 0;
 #X connect 54 0 41 0;
@@ -158,6 +161,12 @@
 #X connect 67 0 45 0;
 #X connect 68 0 46 0;
 #X connect 69 0 47 0;
-#X connect 75 0 26 0;
-#X connect 76 0 75 0;
-#X connect 77 0 75 2;
+#X connect 74 0 26 0;
+#X connect 75 0 74 0;
+#X connect 76 0 74 2;
+#X connect 79 0 80 0;
+#X connect 80 0 38 0;
+#X connect 80 0 37 0;
+#X connect 81 0 82 0;
+#X connect 82 0 40 0;
+#X connect 82 0 39 0;
