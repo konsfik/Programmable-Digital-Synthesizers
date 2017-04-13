@@ -4,11 +4,7 @@ This repository hosts the source code for creating simple and expandable digital
 ## 1. Monk
 <img src="/_images/1-MONK-images/konsfik-monk-programmable-digital-synthesizer-photo-2.jpg" title="Monk" />
 
-**Monk** is a very simple instrument.  
-It consists of one **Arduino Uno** and six potentiometers.  
-The Arduino reads the values of the potentiometers and sends them to PureData via a serial connection over the USB cable.  
-The values of the six potentiometers can be used to control your own patch.  
-You may also use one of the offered examples.  
+**MONK** is a Programmable Digital Synthesizer, made from scratch using Arduino and PureData. The Arduino acts as an input device, reading the values of six potentiometers and transfering the values through USB to a computer that runs PureData. Inside PureData, these values are passed to parameters that control sound, so the whole setup turns into a musical instrument. You may programme your own patches to completely change the MONK’s audio function, or even use it as a controller for other purposes (for example graphics) 
 
 ## 2. HarmonizR
 coming soon!
